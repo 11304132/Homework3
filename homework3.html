@@ -17,6 +17,11 @@
 		}
 		h1 {color: orange; text-align: center;margin-top: 40px;}
 
+		.bar {height: 20px;border-radius: 10px;animation: grow 2s ease-out forwards;}
+		@keyframes grow {from { width: 0%; }
+			to { width: var(--target); }
+  		}
+
 		table {
 			width: 90%;
 			margin: 20px auto;
@@ -116,14 +121,74 @@
 			<td>更高輸出、配備進階、四缸聲浪與高轉特性</td>
 		</tr>
 	</table>
+
+	<div style="width: 80%; margin: auto; color: white;">
+  		<p>馬力 (CBR500R vs CBR650R)</p>
+  	<div style="background:#333; border-radius:10px; overflow:hidden;">CBR500R
+    	<div class="bar" style="--target: 50%; background:orange;"></div>
+  	</div>
+  	<div style="background:#333; border-radius:10px; overflow:hidden; margin-top:5px;">CBR650R
+    	<div class="bar" style="--target: 100%; background:red;"></div>
+  	</div>
+	</div>
+
+	<h1>引擎聲浪</h1>
+	<div class="table-container">
+	<table>
+		<tr>
+			<th>項目</th>
+			<th>CBR500R</th>
+			<th>CBR650R</th>
+		</tr>
+		<tr>
+			<td>排氣量 / 引擎型式</td>
+			<td>471 cc，液冷並列雙缸</td>
+			<td>649 cc，液冷直列四缸</td>
+		</tr>
+		<tr>
+			<td>低轉引擎聲浪</td>
+			<td>
+			<audio controls>
+				<source src="low power cbr500r-sound.m4a" type="audio/mp4">
+			</audio>
+			</td>
+			<td>
+			<audio controls>
+				<source src="low power cbr650r-sound.m4a" type="audio/mp4">
+			</audio>
+			</td>
+		</tr>
+		<tr>
+			<td>高轉引擎聲浪</td>
+			<td>
+			<audio controls>
+				<source src="high power cbr500r-sound.m4a" type="audio/mp4">
+			</audio>
+			</td>
+			<td>
+			<audio controls>
+				<source src="high power cbr650r-sound.m4a" type="audio/mp4">
+			</audio>
+			</td>
+		</tr>
+	</table>
+	</div>
+
+	<div style="background:#111; color:white; padding:30px; margin-top:40px; border-top:2px solid orange;">
+  	<h2 style="color:orange;">總結建議</h2>
+  		<p><b>CBR500R：</b> 適合初學者、日常通勤與偶爾熱血且價格親民。</p>
+  		<p><b>CBR650R：</b> 適合追求聲浪、動力與進階操控感且有一顆本田魂的騎士。</p>
 	</div>
 </div>
 
 
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+	style="position:fixed; bottom:20px; right:20px; background:orange; color:black; border:none; padding:10px 15px; border-radius:10px; cursor:pointer;">
+  	↑ Top
+</button>
 
 
 
 
 </body>
-
 </html>
